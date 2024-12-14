@@ -1,1 +1,1 @@
-web: gunicorn app:wthrpt
+web: gunicorn app:app
