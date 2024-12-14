@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+<div class="bgt">
+    <p>.</p>
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align:center"><b>name: {{ city | lower() }}</b></h2>
+
+    <p>.</p>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide w-30 h-50 center card" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../static/show/000001.jpg" class="d-block w-100 cover" alt="pico">
+        </div>
+        <div class="carousel-item">
+            <img src="../static/show/000002.jpg" class="d-block w-100" alt="pict">
+        </div>
+        <div class="carousel-item">
+            <img src="../static/show/000003.jpg" class="d-block w-100" alt="picth">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="center">
+        <hr>
+        <p style="color:#666666; text-align:center"><small><b>temp: {{rzt["temp"]}}°C</b></small></p>
+        <p style="color:#666666; text-align:center"><small><b>feels-like: {{rzt["flike"]}}°C</b></small></p>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<br>
+<div class="mx-3">
+    <h5><b> a more comprehensive report </b></h5>
+</div>
+<br>
+<div class="mx-5">
+  <div class="mx-5">
+    <div class="mx-5">
+      <div class="row row-cols-1 row-cols-md-3 g-7 mx-5">
+          <div class="col px-5 py-3">
+            <div class="card h-100">
+              <img src="../static/weather.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Weather</b></h5>
+                <hr>
+                <p class="card-text">main: {{rzt["mainw"]}} </p>
+                <p class="card-text">info: {{rzt["desw"]}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col px-5 py-3">
+            <div class="card h-100">
+              <img src="../static/wind.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Wind</b></h5>
+                <hr>
+                <p class="card-text">speed: {{rzt["wspd"]}}m/s</p>
+                <p class="card-text">degree: {{rzt["wdg"]}}°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col px-5 py-3">
+              <div class="card h-100">
+                <img src="../static/cloud.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Clouds</b></h5>
+                  <hr>
+                  <p class="card-text">cloudliness: {{rzt["cld"]}}%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col px-5 py-3">
+              <div class="card h-100">
+                <img src="../static/sun.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Sun</b></h5>
+                  <hr>
+                  <p class="card-text">sunrise: {{rzt["sunr"]}}</p>
+                  <p class="card-text">sunset: {{rzt["suns"]}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col px-5 py-3">
+              <div class="card h-100">
+                <img src="../static/humid.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Others</b></h5>
+                  <hr>
+                  <p class="card-text">humidity: {{rzt["humi"]}}%</p>
+                  <p class="card-text">pressure: {{rzt["pres"]}}hPa</p>
+                </div>
+              </div>
+            </div>
+            <div class="col px-5 py-3">
+              <div class="card h-100">
+                <img src="../static/rain.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Country</b></h5>
+                  <hr>
+                  <p class="card-text">a city of {{rzt["cntr"]}}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+
+{% endblock %}

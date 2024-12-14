@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+-
+{% endblock %}
+
+{% block content %}
+<link href="/static/icons/cloud-sleet-fill.svg" rel="icon">
+{% endblock %}
+
+{% block main %}
+
+{% if rows %}
+
+<br>
+<br>
+<br>
+<br>
+<div class="mx-5">
+    <div class="mx-5">
+      <div class="mx-5">
+        <div class="row row-cols-1 row-cols-md-3 g-7 mx-5">
+          {% for row in rows %}
+          <div class="col px-5 py-3">
+            <div class="card h-100">
+              <img src="../static/save/{{row['name']}}/000001.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="text-align:center"><b>{{row["name"]}}</b></h5>
+                <hr>
+                <form action="/rm" method="post">
+                    <input type="hidden" id="citm" name="citm" value={{nae[i]}}>
+                    <button type="submit" class="btn">-</button>
+                  </form>
+                  {% set i = i + 1 %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+{% else %}
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div class="hfill center">
+    <h2 style="text-align:center"><b>~ no cities to edit ~</b></h2>
+    <hr>
+    <br>
+    <img src="../static/totobus.jpg"
+      class="img-fluid" width="900" alt="Sample image">
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h5 style="text-align:center; color: grey"><b>return to <a style="color:green" href="/">homepage</a></b></h5>
+  </div>
+{% endif %}
+
+{% endblock %}

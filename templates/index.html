@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<link href="/static/icons/cloud-fill.svg" rel="icon">
+{% endblock %}
+
+{% block main %}
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<h2 style="text-align:center"><b>˗ˏˋmain pageˎˊ˗</b></h2>
+<br>
+<div class="hfill center">
+    <a href="/wth"><img src="../static/anirain.jpg"
+      class="img-fluid" alt="Sample image"></a>
+      <p style="text-align:center; color: #C4C4C4"><b>(click image to see
+            how's the weather today!)</b></p>
+  </div>
+<p>.</p>
+<p>.</p>
+<h5 style="text-align:center; color:grey"><b>welcome to weather report !!</b></h5>
+
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<hr>
+<hr>
+<p>.</p>
+{% if rows %}
+<h3><b>your cities </b></h3>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div class="mx-5">
+  <div class="mx-5">
+    <div class="mx-5">
+      <div class="row row-cols-1 row-cols-md-3 g-7 mx-5">
+        {% for row in rows %}
+        <div class="col px-5 py-3">
+          <div class="card h-100">
+            <img src="../static/save/{{row['name']}}/000001.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align:center"><b>{{row["name"]}}</b></h5>
+              <hr>
+              <p class="card-text" style="text-align:center">weather: {{row["weather"]}}</p>
+              <p class="card-text" style="text-align:center">temp: {{row["temp"]}} </p>
+              <p class="card-text" style="text-align:center">country: {{row["country"]}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+{% else %}
+<h3><b>your cities </b></h3>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<h4 style="text-align:center; color:grey"><b>please add some cities from <a href="/adc">"add-city"</a> :3</b></h4>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    sorry
+{% endblock %}
+
+{% block main %}
+    <img alt="{{top}}" class="border img-fluid center" src=" https://api.memegen.link/images/elmo/{{ bottom | urlencode }}/you/no/error {{ top | urlencode }}.jpg?watermark=memecomplete.com&token=kybi9doxq8idaztccuys " title="{{ top }}">
+{% endblock %}

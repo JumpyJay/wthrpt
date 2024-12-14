@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
++
+{% endblock %}
+
+{% block content %}
+<link href="/static/icons/cloud-drizzle-fill.svg" rel="icon">
+{% endblock %}
+
+{% block main %}
+
+<div class="bgth">
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h2 style="text-align:center"><b>˗ˏˋsearch for city to addˎˊ˗</b></h2>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <div class="input-group center" style="width: 30%">
+        <div class="form-outline">
+        <form action="/adc" method="post">
+            <input type="text" autocomplete="off" autofocus id="form1" name="acity" class="form-control" style="font-weight: bold;"/>
+            <label class="form-label" for="form1">Search</label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <p class="small fw-bold mt-2 pt-1 mt-3" style="color:#FFAFAF; text-align:center">{{text}}</p>
+</div>
+
+{% endblock %}
